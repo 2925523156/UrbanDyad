@@ -136,14 +136,6 @@ python scripts/predict_ndvi.py --input-csv path/to/monthly_ndvi_samples.csv
 python scripts/predict_meteorology.py --input-csv path/to/monthly_meteorology_samples.csv
 ```
 
-## Reproducibility Notes
-
-This repository is intended to document and release the computational pipeline of
-UrbanDyad. Since raw data and trained weights are not redistributed, exact reproduction
-requires access to the corresponding urban datasets or compatible alternatives.
-
-Before running the scripts, users should update input paths, output paths, and hardware
-settings according to their local environment.
 
 ## Citation
 
