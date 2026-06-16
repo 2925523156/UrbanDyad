@@ -75,39 +75,6 @@ The implementation uses PyTorch. If the POI graph encoder is enabled, install
 PyTorch Geometric following the official instructions for your local PyTorch and CUDA
 versions.
 
-## Data Availability
-
-The full raw datasets used in the paper are not included in this repository because
-some sources are subject to license or access restrictions, including China Unicom OD
-records, Baidu street-view images, and Amap POI records. Model checkpoints and learned
-embeddings are also not uploaded.
-
-Users with access to equivalent data can reproduce the pipeline by preparing processed
-files with the following schemas:
-
-```text
-poi_by_cell.csv
-cell_id,category_1,category_2,...,category_23
-
-od_records.csv
-origin_cell_id,destination_cell_id,timestamp,flow
-
-mobility_state_by_cell.csv
-cell_id,timestamp,departure,arrival,total_interaction,net_flow
-
-static_embeddings.csv
-cell_id,emb_0,emb_1,...,emb_127
-
-dynamic_embeddings.csv
-cell_id,timestamp,emb_0,emb_1,...,emb_127
-
-downstream_labels.csv
-cell_id,timestamp,task_name,label
-```
-
-Public downstream data should be obtained from the official sources cited in the
-paper. Restricted data should be converted to the above formats before running the
-training or evaluation scripts.
 
 ## Usage
 
