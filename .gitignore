@@ -1,0 +1,48 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Outputs and logs
+outputs/
+runs/
+logs/
+*.log
+
+# Data files that should not be uploaded
+data/raw/
+data/private/
+data/full/
+*.csv.gz
+*.parquet
+*.geojson
+*.shp
+*.tif
+*.tiff
+
+# Model weights and large intermediate arrays.
+# Keep only the released static encoder checkpoint.
+checkpoints/*
+!checkpoints/static/
+!checkpoints/static/README.md
+!checkpoints/static/config.json
+!checkpoints/static/urban_dyad_static_encoder.ckpt
+*.ckpt
+!checkpoints/static/urban_dyad_static_encoder.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

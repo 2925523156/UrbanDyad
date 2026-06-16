@@ -1,0 +1,49 @@
+{
+  "paths": {
+    "project_root": "D:\\新的实验",
+    "module_root": "D:\\新的实验\\实验代码\\编码器\\三模态融合编码器",
+    "city_assignment_csv": "D:\\新的实验\\输入数据\\大湾区遥感数据\\gba_cell_tif_outputs_by_city\\city_assignment.csv",
+    "rs_features_npy": "D:\\新的实验\\输入数据\\大湾区遥感数据\\gba_cell_tif_outputs_by_city\\remoteclip_features_vit_l_14.npy",
+    "osm_features_npy": "D:\\新的实验\\输入数据\\大湾区OSM底图数据\\gba_cell_tif_outputs_by_city\\osm_mae_features_2304.npy",
+    "street_features_csv": "D:\\新的实验\\输入数据\\大湾区街景图像\\street_clip_features_768.csv",
+    "street_features_npy": "D:\\新的实验\\输入数据\\大湾区街景图像\\street_clip_features_768.npy",
+    "poi_distribution_csv": "D:\\新的实验\\输入数据\\大湾区POI数据\\poi_top23_by_gba_s2_cell.csv",
+    "poi_graph_cell_ids_csv": "D:\\新的实验\\输入数据\\大湾区POI数据\\poi_top23_gba_cosine_cell_ids.csv",
+    "poi_similarity_blocks_dir": "D:\\新的实验\\输入数据\\大湾区POI数据\\poi_top23_gba_cosine_blocks",
+    "poi_graph_cache_dir": "D:\\新的实验\\输入数据\\大湾区POI数据\\poi_threshold_0_8_csr_random_walk",
+    "output_root": "D:\\新的实验\\实验代码\\编码器\\三模态融合编码器\\outputs"
+  },
+  "graph": {
+    "poi_threshold": 0.8,
+    "max_block_files": 0
+  },
+  "random_walk": {
+    "num_walks": 4,
+    "walk_length": 8,
+    "restart_prob": 0.2
+  },
+  "model": {
+    "use_poi": true,
+    "poi_node_dim": 128,
+    "fusion_dim": 256,
+    "contrastive_dim": 128,
+    "transformer_depth": 1,
+    "num_heads": 4,
+    "ff_dim": 512,
+    "dropout": 0.1
+  },
+  "training": {
+    "batch_size": 64,
+    "epochs": 400,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "val_ratio": 0.1,
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0,
+    "num_workers": 0,
+    "seed": 42,
+    "max_samples": 0,
+    "device": "auto",
+    "amp": true
+  }
+}
