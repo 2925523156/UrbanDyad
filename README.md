@@ -16,6 +16,8 @@ The framework consists of three components:
 3. **Downstream evaluation** (`src/downstream/`): MLP-based predictors for static and
    dynamic urban sensing tasks.
 
+![Framework](Overview.png)
+
 ## Project Structure
 
 ```text
